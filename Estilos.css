@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box; /*se usa para que no crezca mas de lo que le decimos */
+}
+
+html {
+    scroll-behavior: smooth; /*ponemos el scroll en nuestro html */
+}
+
+body {
+    font-family: "roboto" , sans-serif;
+    margin:0;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+h4{font-size: 1.5em;}
+p{font-size: 1.25em;}
+ul{list-style: none;} /*quitamos el punto */
+li{font-size: 1.25;}
+
+button {
+    font-size: 1.5em;
+    font-weight:bold; /*agregamos negrita*/
+    padding: 10px 20px;
+    border-radius: 7px; /*agregamos un borde redonndo*/
+    border:1px solid #c1c1c1 ; /*hacemos mas pequeño nuestro boton*/
+    box-shadow: 2px 2px #fff; /*agrega el posicionamiento de la sombra y color*/
+    color:#fff;/*cambia el color de la fuente*/
+    background-color:#fba4cb; /*cambio de color de fondo*/
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color:#f590be;/*le damos efecto de cambiar de color con button:hover*/
+}
+
+.color-acento{ color: #f590be;}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #f6f3f3;
+}
+
+header .logo {
+    padding: 10px 12px;
+    font-weight: bold;
+    color: #f590be;
+    font-size: 1.6em;
+}
+
+header .container {
+    display: flex; /*ayuda a colocar las cajas como si fueran celdas de tablas, con un comportamiento predecible y adaptable*/
+    flex-direction: column;/*determina la dirección en que se ordenarán los elementos en el espacio*/
+    align-items: center;/*controla la alineación de todos los elementos en el eje transversal*/
+}
+
+header nav{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none; /*quitamos el subrayado*/
+    font-weight: bold;
+    color: #1C1C1C;
+}
+
+header a:hover {
+    color: #fba4cb;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center; /*define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor*/
+    text-align: center;
+    flex-direction: column;
+    height: 90vh; /*medida que cambia enbase a la altura de tu pantalla , cambia mediante el dispositivo;*/
+    color:#fff;
+    background-image: 
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(Imagenes/portada.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center; /*acomoda la imagen al centro de esta */
+}
+
+.hero button {
+    font-size: 1.75em;
+
+}
+
+.hero h1{
+    color: #fff;
+}
+
+#somos-casate {
+
+}
+
+#somos-casate .container {
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#somos-casate h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#tipo-de-anillos{
+    background: #1C1C1C;
+    color: #fff;
+    text-align:center;
+}
+
+#tipo-de-anillos .container {
+    padding: 150px 12px;
+}
+
+#tipo-de-anillos p {
+    display: none; /*quitamos el texto p */
+}
+
+#tipo-de-anillos .carta {
+    background-size: cover;
+    background-position: center center;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.carta:first-child { /*asi señalamos al 1 hermano*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(Imagenes/compromiso.png);
+}
+
+.carta:nth-child(2) { /*asi señalamos al 2 hermano*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(Imagenes/matrimonio.png);
+}
+
+.carta:nth-child(3) { /*asi señalamos al 3 hermano*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(Imagenes/trio.png);
+}
+
+#caracteristicas .container {
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas li {
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    flex-direction: column;
+    background-color: #1C1C1C;
+    color: #fff;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button {
+    font-size: 5vw;
+}
+
+footer {
+    background-color: hsl(335, 100%, 97%);
+}
+
+footer p{
+    margin:0;
+    color: #c1c1c1;
+    padding: 12px;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width:720px){
+    header {
+        position: fixed;
+        width: 100%; /*lo podemos por utizar fixed */
+    }
+
+    header .container {
+        flex-direction: row; /*determina la dirección en que se ordenarán los elementos en el espacio. Esto puede ser de izquierda a derecha (row), de derecha a izquierda (row-reverse) */
+        justify-content: space-between; /*separa los elementos y los ubica en la esquina */
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 5em;
+    }
+
+    #somos-casate .container {
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-casate .texto {
+        width: 50%;
+        text-align: initial;
+        padding:0px 30px;
+        padding-left: 30px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-casate h2 {
+        margin-top: 0px;
+    }
+
+    #somos-casate .img-container {
+        background-image:url(Imagenes/img-casate.png);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px ;
+
+    }
+    
+    #tipo-de-anillos .tipos {
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    #tipo-de-anillos p {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #tipo-de-anillos h3{
+        margin-top: 0;
+    }
+
+    #tipo-de-anillos .carta {
+        padding: 50px;
+    }
+
+    #caracteristicas {
+        background-image: url(./Imagenes/lista.png);
+        background-repeat: no-repeat;
+        background-size: 250px 250px;
+        background-position: calc(100vw - 500px) 218px;
+    }
+
+    #caracteristicas .container {
+        text-align: initial; /*posiciona al inicio*/
+
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+
+    }
+
+    #final h2 {
+        font-size: 5em;
+    }
+
+    #final button {
+        font-size: 2em;
+    }
+}
+@media (min-width:1200px){
+    #caracteristicas{
+        background-position-x: calc(100vw - 700px);
+    }
+}
